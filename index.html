@@ -10,9 +10,9 @@
 </head>
 
 <body>
-    <header>
+    <header class="sm:left-3">
         <!-- Nav Bar -->
-        <nav class="mx-4 mt-5">
+        <nav class="mx-4 mt-5 sm:right-3">
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
                     <div class="">
@@ -23,10 +23,10 @@
 
                 </div>
                 <div class="navbar-center hidden lg:flex sm:hidden md:hidden">
-                    <button id="short-by-view" class="bg-gray-400 p-2 rounded-sm">Sort by view</button>
+                    <button onclick="sortByDate()" class="bg-gray-400 p-2 rounded-sm">Sort by view</button>
                 </div>
                 <div class="navbar-end">
-                    <button id="short-by-view" class="bg-red-500 px-3 py-1 rounded-sm">Blog</button>
+                    <button id="blog-btn" class="bg-red-500 px-3 py-1 rounded-sm">Blog</button>
                 </div>
             </div>
         </nav>
@@ -36,12 +36,15 @@
     </header>
     <main>
         <!-- All card container -->
-        <div class="tab-container w-full mt-5">
-            <div id="all-tab-container" class="tabs tabs flex text-center m-auto w-96 p-2 justify-center ">
+        <div class="tab-container w-full mt-5 sm:p-4 ">
+            <div id="all-tab-container" class="tabs tabs  flex text-center m-auto w-96 p-2 justify-center sm:px-5 ">
 
             </div>
         </div>
-        <div id="card-container" class="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-4 gap-4 mx-5">
+        <div id="card-container" class="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-4 gap-3 px-7 mt-5 sm:right-3">
+           
+        </div>
+        <div id="no-data-container" class="text-center items-center justify-center">
            
         </div>
 
