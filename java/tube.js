@@ -1,10 +1,7 @@
-let fetchedTools =[];
-
 const handleVideo = async() => {
     const res = await fetch('https://openapi.programming-hero.com/api/videos/categories');
     const data = await res.json();
     const videoCategory = data.data;
-    // console.log(videoCategory);
     const tabContainer = document.getElementById('all-tab-container');
     videoCategory.forEach((category) =>{
         const div = document.createElement('div');
@@ -19,7 +16,6 @@ const handleLoadVideo = async(categoryId) =>{
     const res = await fetch(`https://openapi.programming-hero.com/api/videos/category/${categoryId}`);
     const data = await res.json();
     const eachTabData = data.data;
-    console.log(eachTabData);
     const noDataContainer = document.getElementById('no-data-container');
     noDataContainer.innerHTML = '';
     
